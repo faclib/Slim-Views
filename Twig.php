@@ -112,7 +112,7 @@ class Twig extends \Slim\View
              * otherwise include it.
              */
             if (!class_exists('\Twig_Autoloader')) {
-                if (file_exists($this->parserDirectory . '/Autoloader.php') {
+                if (file_exists($this->parserDirectory . '/Autoloader.php')) {
                     require_once $this->parserDirectory . '/Autoloader.php';
                 } else {
                     require_once 'Twig/Autoloader.php';

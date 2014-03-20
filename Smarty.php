@@ -103,7 +103,7 @@ class Smarty extends \Slim\View
                 // if (!is_dir($this->parserDirectory)) {
                 //     throw new \RuntimeException('Cannot set the Smarty lib directory : ' . $this->parserDirectory . '. Directory does not exist.');
                 // }
-                if (file_exists( $this->parserDirectory . '/Smarty.class.php') {
+                if (file_exists( $this->parserDirectory . '/Smarty.class.php')) {
                     require_once $this->parserDirectory . '/Smarty.class.php';
                 } else {
                     require_once 'Smarty/Smarty.class.php';

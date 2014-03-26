@@ -89,15 +89,6 @@ class Twig extends \Slim\View
         return $parser->render($this->all(), $data);
     }
 
-    /**
-     * DEPRECATION WARNING! This method will be removed in the next major point release
-     *
-     * Use getInstance method instead
-     */
-    public function getEnvironment()
-    {
-        return $this->getInstance();
-    }
 
     /**
      * Creates new TwigEnvironment if it doesn't already exist, and returns it.
@@ -118,9 +109,9 @@ class Twig extends \Slim\View
                     require_once 'Twig/Autoloader.php';
                 }
             }
-
             \Twig_Autoloader::register();
-            $loader = new \Twig_Loader_Filesystem($this->getTemplateDirs());
+
+            $loader = new \Twig_Loader_Filesystem($this->templateDirectory);
             $this->parserInstance = new \Twig_Environment(
                 $loader,
                 $this->parserOptions
